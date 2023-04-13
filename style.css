@@ -35,3 +35,10 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+
+.littleBtn {
+  background-color: rgba(red, green, blue, alpha);
+  margin-left: 2x;
+  padding: 2px 4px
+  font-family: 
+}
