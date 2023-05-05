@@ -1,25 +1,83 @@
-//const { locationInfo } = require("jsdom/lib/jsdom/living/helpers/internal-constants");
+const taskForm = document.querySelector('#create-task-form')
+const tasks = document.querySelector('#tasks')
 
-document.addEventListener("DOMContentLoaded", (event) => {});
+///adding items to to-dos. 
+taskForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const input = document.querySelector('#new-task-description')
+  let inputtedValue = input.value
 
-const tasks = document.querySelector("#tasks")
-const submitBtn=document.querySelector("#submit")
-const userImput= document.querySelector("#new-task-description")
+  let taskItem = document.createElement('li')
 
+  taskItem.textContent=inputtedValue
 
-function addNewTask (text) {
-  const taskItem= document.createElement("li");
-  const littleBtn =document.createElement("span")
-  littleBtn.classList.add("littleBtn")
-  taskItem.textContent= userImput.value
-  tasks.append(taskItem, littleBtn)
-}
+  tasks.appendChild(taskItem)
 
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  addNewTask()  
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", (event) => {});
+
+// const tasks = document.querySelector("#tasks")
+// const submitBtn=document.querySelector("#submit")
+// const userImput= document.querySelector("#new-task-description")
+
+
+// function addNewTask (text) {
+//   const taskItem= document.createElement("li");
+//   const littleBtn =document.createElement("span")
+//   littleBtn.classList.add("littleBtn")
+//   taskItem.textContent= userImput.value
+//   tasks.append(taskItem, littleBtn)
+// }
+
+// submitBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   addNewTask()  
+// })
+
+// delBtn= document.createElement('button')
 
 
 //needs: 1. type a task into input field, 
